@@ -20,6 +20,6 @@ class ServerDetailView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Server.objects.all()
     serializer_class = ServerSerializer
 
-class ServerReviewsView(generics.RetrieveUpdateDestroyAPIView):
+class ServerReviewsView(generics.ListAPIView):
     queryset = Server.objects.all()
     serializer_class = ServersReviewSerializer
