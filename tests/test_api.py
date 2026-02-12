@@ -295,6 +295,7 @@ class ServerAPIViewTestCase(APITestCase):
 
 
 # Pytest style tests
+@pytest.mark.django_db
 class TestServerEndpointsWithPytest:
     """Pytest-style tests for server API endpoints"""
     @pytest.fixture(autouse=True)
