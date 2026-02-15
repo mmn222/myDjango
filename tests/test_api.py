@@ -297,15 +297,7 @@ class ServerAPIViewTestCase(APITestCase):
 # Pytest style tests
 class TestServerEndpointsWithPytest:
     """Pytest-style tests for server API endpoints"""
-    @pytest.fixture(autouse=True)
-    def setup(self, db):
-        self.client = APIClient()
-        self.server = Server.objects.create(
-            name="Pytest Server",
-            ip_address="10.20.30.40",
-            description="Pytest test server",
-            server_is_active=True,
-        )
+    
     @pytest.fixture(autouse=True)
     def setup(self):
         """Setup test data"""
